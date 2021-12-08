@@ -46,7 +46,7 @@ class Db_Class
         $lat = $_POST['lat'];
         $lng = $_POST['lng'];
 
-        $sql = "update ibadah set id='" . $this->cleanData($_POST['id']) . "',nama='" . $this->cleanData($_POST['nama']) . "', jenis='" . $this->cleanData($_POST['jenis']) . "',geom= ST_GeomFromText('POINT($lng $lat)', 4326)  where id = '" . $this->cleanData($_POST['id']) . "' ";
+        $sql = "update ibadah set id='" . $this->cleanData($_POST['id']) . "',nama='" . $this->cleanData($_POST['nama']) . "', jenis='" . $this->cleanData($_POST['jenis']) . "', lat='" . $this->cleanData($_POST['lat']) . "',lng='" . $this->cleanData($_POST['lng']) . "' ,geom= ST_GeomFromText('POINT($lng $lat)', 4326)  where id = '" . $this->cleanData($_POST['id']) . "' ";
         return pg_affected_rows(pg_query($sql));
     }
     function cleanData($val)
