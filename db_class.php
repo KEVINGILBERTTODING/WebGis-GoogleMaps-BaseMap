@@ -43,7 +43,10 @@ class Db_Class
     function updateUser($data = array())
     {
 
-        $sql = "update jenis set id='" . $this->cleanData($_POST['id']) . "',nama='" . $this->cleanData($_POST['nama']) . "', jenis='" . $this->cleanData($_POST['jenis']) . "'='" . $this->cleanData($_POST['luas']) . "' where id = '" . $this->cleanData($_POST['id']) . "' ";
+        $lat = $_POST['lat'];
+        $lng = $_POST['lng'];
+
+        $sql = "update ibadah set id='" . $this->cleanData($_POST['id']) . "',nama='" . $this->cleanData($_POST['nama']) . "', jenis='" . $this->cleanData($_POST['jenis']) . "',geom= ST_GeomFromText('POINT($lng $lat)', 4326)  where id = '" . $this->cleanData($_POST['id']) . "' ";
         return pg_affected_rows(pg_query($sql));
     }
     function cleanData($val)

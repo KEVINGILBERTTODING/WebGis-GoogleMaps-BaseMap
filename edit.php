@@ -10,6 +10,8 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
       echo '</script>';
    }
 }
+
+
 ?>
 <div class="container">
 
@@ -26,23 +28,28 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Kodedagri:<span style='color:red'>*</span></label>
+               <label class="control-label col-sm-2">Nama Tempat Ibadah:<span style='color:red'>*</span></label>
                <div class="col-sm-5">
-                  <input class="form-control" value="<?= $user->kodedagri ?>" type="number" name="kodedagri" required>
+                  <input class="form-control" value="<?= $user->nama ?>" name="nama" required>
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Kecamatan:<span style='color:red'>*</span></label>
+               <label class="control-label col-sm-2">Jenis:<span style='color:red'>*</span></label>
                <div class="col-sm-5">
-                  <input class="form-control" value="<?= $user->kecamatan ?>" type="text" name="kecamatan" required>
+                  <input class="form-control" value="<?= $user->jenis ?>" type="text" name="jenis" required>
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Luas:<span style='color:red'>*</span></label>
+               <label class="control-label col-sm-2">Latitude:<span style='color:red'>*</span></label>
                <div class="col-sm-5">
-                  <textarea rows="5" cols="5" class="form-control" name="luas" required><?= $user->luas ?></textarea>
+                  <input class="form-control" name="lat" required>
                </div>
-               <input type="hidden" value="<?= $user->id ?>" name="id">
+            </div>
+            <div class="form-group">
+               <label class="control-label col-sm-2">Longitude:<span style='color:red'>*</span></label>
+               <div class="col-sm-5">
+                  <input class="form-control" name="lng" required>
+               </div>
             </div>
             <div class="form-group">
                <label class="control-label col-sm-2"> </label>
