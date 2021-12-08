@@ -20,22 +20,27 @@ if (isset($_POST['submit']) and !empty($_POST['submit'])) {
          <div class="panel-body">
 
             <div class="form-group">
-               <label class="control-label col-sm-2">Id:<span style='color:red'>*</span></label>
+               <label class="control-label col-sm-2">ID:<span style='color:red'>*</span></label>
                <div class="col-sm-5">
                   <input class="form-control" type="number" name="id" required>
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">nama:<span style='color:red'>*</span></label>
+               <label class="control-label col-sm-2">Nama tempat ibadah:<span style='color:red'>*</span></label>
                <div class="col-sm-5">
                   <input class="form-control" type="text" name="nama" required>
                </div>
             </div>
 
             <div class="form-group">
-               <label class="control-label col-sm-2">jenis:<span style='color:red'>*</span></label>
+               <label class="control-label col-sm-2">Jenis tempat ibadah:<span style='color:red'>*</span></label>
                <div class="col-sm-5">
-                  <input class="form-control" type="text" name="jenis" required>
+                  <select name="jenis" id="jenis">
+                     <option value="Gereja">Gereja</option>
+                     <option value="Masjid">Masjid</option>
+                     <option value="Pura">Pura</option>
+                     <option value="Vihara">Vihara</option>
+                  </select>
                </div>
             </div>
             <div class="form-group">
