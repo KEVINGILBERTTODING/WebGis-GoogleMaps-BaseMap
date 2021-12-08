@@ -1,13 +1,17 @@
 <?php
 
+// mengikutkan connection.inc.php
 include_once('connection.inc.php');
 $connection_string = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password} ";
 $dbconn = pg_connect($connection_string) or die('Could not reach database.');
 
 class Db_Class
 {
+    // deklarasi nama table
     private $table_name = 'ibadah';
-    function createUser()
+
+    // create point sarana ibadah
+    function createPoint()
     {
 
         $lat = $_POST['lat'];
@@ -20,27 +24,32 @@ class Db_Class
         return pg_affected_rows(pg_query($sql));
     }
 
-    function getUsers()
+    // menampilkan isi semua table ibadah
+    function getPoint()
     {
         $sql = "select *from public." . $this->table_name;
         return pg_query($sql);
     }
 
-    function getUserById()
+    // mengambil data sebaran ibadah berdasarkan id
+    function getPointById()
     {
 
         $sql = "select *from public." . $this->table_name . "  where id='" . $this->cleanData($_POST['id']) . "'";
         return pg_query($sql);
     }
 
-    function deleteuser()
+
+    // delete data sarana ibadah
+    function deletePoint()
     {
 
         $sql = "delete from public." . $this->table_name . "  where id='" . $this->cleanData($_POST['id']) . "'";
         return pg_query($sql);
     }
 
-    function updateUser($data = array())
+    // update data sarana ibadah
+    function updatePoint($data = array())
     {
 
         $lat = $_POST['lat'];

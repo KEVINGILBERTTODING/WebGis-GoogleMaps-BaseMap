@@ -7,7 +7,7 @@ $obj = new Db_Class();
 <html lang="en">
 
 <head>
-  <title>PHP PostgreSQL</title>
+  <title>Semarang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />

@@ -2,7 +2,7 @@
 include('header.php');
 $user = $_SESSION['user'];
 if (isset($_POST['update']) and !empty($_POST['update'])) {
-   $ret_val = $obj->updateUser();
+   $ret_val = $obj->updatePoint();
    if ($ret_val == 1) {
       echo '<script type="text/javascript">';
       echo 'alert("Record Updated Successfully");';
@@ -17,10 +17,10 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
 
    <a href="index.php" class="btn btn-primary pull-right mt-4"><span class="glyphicon glyphicon-step-backward"></span>Back</a>
    <br>
-   <div class="container">
+   <div class="container mt-4 mb-4">
 
       <form class="form-group" method="post">
-         <div class="panel-body">
+         <div class="panel-body ">
             <div class="form-group">
                <label class="control-label col-sm-2">Id:<span style='color:red'>*</span></label>
                <div class="col-sm-5">

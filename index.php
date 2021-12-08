@@ -1,11 +1,11 @@
 <?php
 include('header.php');
-$users = $obj->getUsers();
+$points = $obj->getPoint();
 
 if (isset($_POST['update'])) {
 
-  $user = $obj->getUserById();
-  $_SESSION['user'] = pg_fetch_object($user);
+  $point = $obj->getPointById();
+  $_SESSION['point'] = pg_fetch_object($point);
   header('location:edit.php');
 }
 
@@ -13,7 +13,7 @@ if (isset($_POST['update'])) {
 
 if (isset($_POST['delete'])) {
 
-  $ret_val = $obj->deleteuser();
+  $ret_val = $obj->deletePoint();
   if ($ret_val == 1) {
 
     echo "<script language='javascript'>";
@@ -45,7 +45,7 @@ if (isset($_POST['delete'])) {
         </tr>
       </thead>
       <tbody>
-        <?php while ($user = pg_fetch_object($users)) : ?>
+        <?php while ($user = pg_fetch_object($points)) : ?>
           <tr align="left">
             <td><?= $user->id ?></td>
             <td><?= $user->nama ?></td>
