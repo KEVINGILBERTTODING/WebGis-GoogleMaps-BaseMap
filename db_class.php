@@ -16,7 +16,7 @@ class Db_Class
         $nama = $_POST['nama'];
         $jenis = $_POST['jenis'];
 
-        $sql = "insert into ibadah (id, nama, jenis, geom) VALUES ('$id', '$nama', '$jenis', ST_GeomFromText('POINT($lng $lat)', 4326))";
+        $sql = "insert into ibadah (id, nama, jenis, lat, lng, geom) VALUES ('$id', '$nama', '$jenis', '$lat', '$lng', ST_GeomFromText('POINT($lng $lat)', 4326))";
         return pg_affected_rows(pg_query($sql));
     }
 
