@@ -19,23 +19,23 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
    <br>
    <div class="container">
 
-      <form class="form-group" method="post">
+      <form class="form-group mb-4 mt-4" method="post">
          <div class="panel-body">
             <div class="form-group">
                <label class="control-label col-sm-2">Id:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <div class="col-sm-1 mb-2 mt-2">
                   <input class="form-control" value="<?= $user->id ?>" type="text" name="id" required>
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Nama Tempat Ibadah:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <label class="control-label col-sm-2 mb-2">Nama Tempat Ibadah:<span style='color:red'>*</span></label>
+               <div class="col-sm-5 mb-2">
                   <input class="form-control" value="<?= $user->nama ?>" name="nama" required>
                </div>
             </div>
             <div class="form-group">
                <label class="control-label col-sm-2">Jenis tempat ibadah:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <div class="col-sm-5 mt-2">
                   <select name="jenis" id="jenis">
                      <option value="Gereja">Gereja</option>
                      <option value="Masjid">Masjid</option>
@@ -45,14 +45,14 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Latitude:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <label class="control-label col-sm-2 mt-2">Latitude:<span style='color:red'>*</span></label>
+               <div class="col-sm-5 mt-2">
                   <input class="form-control" value="<?= $user->lat ?>" name="lat" required>
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Longitude:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <label class="control-label col-sm-2 mt-2">Longitude:<span style='color:red'>*</span></label>
+               <div class="col-sm-5 mt-2">
                   <input class="form-control" value="<?= $user->lng ?>" name="lng" required>
                </div>
             </div>

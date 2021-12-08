@@ -21,20 +21,20 @@ if (isset($_POST['submit']) and !empty($_POST['submit'])) {
 
             <div class="form-group">
                <label class="control-label col-sm-2">ID:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <div class="col-sm-5 mt-2">
                   <input class="form-control" type="number" name="id" required>
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Nama tempat ibadah:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <label class="control-label col-sm-2 mt-2">Nama tempat ibadah:<span style='color:red'>*</span></label>
+               <div class="col-sm-5 mt-2">
                   <input class="form-control" type="text" name="nama" required>
                </div>
             </div>
 
             <div class="form-group">
-               <label class="control-label col-sm-2">Jenis tempat ibadah:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <label class="control-label col-sm-2 mt-2">Jenis tempat ibadah:<span style='color:red'>*</span></label>
+               <div class="col-sm-5 mt-2">
                   <select name="jenis" id="jenis">
                      <option value="Gereja">Gereja</option>
                      <option value="Masjid">Masjid</option>
@@ -44,14 +44,14 @@ if (isset($_POST['submit']) and !empty($_POST['submit'])) {
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Latitude:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <label class="control-label col-sm-2 mt-2">Latitude:<span style='color:red'>*</span></label>
+               <div class="col-sm-5 mt-2">
                   <input class="form-control" name="lat" required>
                </div>
             </div>
             <div class="form-group">
-               <label class="control-label col-sm-2">Longitude:<span style='color:red'>*</span></label>
-               <div class="col-sm-5">
+               <label class="control-label col-sm-2 mt-2">Longitude:<span style='color:red'>*</span></label>
+               <div class="col-sm-5 mt-2">
                   <input class="form-control" name="lng" required>
                </div>
             </div>
