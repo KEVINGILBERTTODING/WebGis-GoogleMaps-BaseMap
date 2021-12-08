@@ -42,13 +42,13 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
             <div class="form-group">
                <label class="control-label col-sm-2">Latitude:<span style='color:red'>*</span></label>
                <div class="col-sm-5">
-                  <input class="form-control" name="lat" required>
+                  <input class="form-control" value="<?= $user->lat ?>" name="lat" required>
                </div>
             </div>
             <div class="form-group">
                <label class="control-label col-sm-2">Longitude:<span style='color:red'>*</span></label>
                <div class="col-sm-5">
-                  <input class="form-control" name="lng" required>
+                  <input class="form-control" value="<?= $user->lng ?>" name="lng" required>
                </div>
             </div>
             <div class="form-group">
