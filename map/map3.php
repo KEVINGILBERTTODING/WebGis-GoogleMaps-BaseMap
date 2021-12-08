@@ -20,7 +20,7 @@ include('../header2.php');
         </div>
         <div class="container">
             <div class="map mt-4">
-                <object data="http://localhost/geoserver/semarang1/wms?service=WMS&version=1.1.0&request=GetMap&layers=semarang1%3Aadm_kec_kota_semarang_250k&bbox=110.26911926269531%2C-7.114580154418945%2C110.50536346435547%2C-6.931527614593506&width=768&height=595&srs=EPSG%3A4326&styles=&format=application/openlayers" width="1920px" height="800px"></object>
+                <object data="http://localhost/geoserver/semarang1/wms?service=WMS&version=1.1.0&request=GetMap&layers=semarang1%3Asemarang%20ibadah&bbox=110.26911926269531%2C-7.114580154418945%2C110.50536346435547%2C-6.931527614593506&width=768&height=595&srs=EPSG%3A4326&styles=&format=application/openlayers" width="1920px" height="800px"></object>
             </div>
         </div>
     </div>

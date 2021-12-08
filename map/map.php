@@ -23,6 +23,7 @@ include('../header2.php');
 
 <div id="mapdiv"></div>
 <script>
+    //Menampilkan OSM sebagai base map
     var mymap = L.map("mapdiv").setView([-7.0149, 110.3942], 12);
 
     var osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -35,6 +36,8 @@ include('../header2.php');
 
     osm.addTo(mymap);
 
+    //Menampilkan Map
+
     var semarang = L.tileLayer.wms("/geoserver/wms", {
         layers: "semarang1:adm_kec_kota_semarang_250k",
         format: "image/png",
@@ -43,11 +46,16 @@ include('../header2.php');
     semarang.addTo(mymap);
 
 
-    var semarang_road = L.tileLayer.wms("/geoserver/wms", {
+    //Menampilkan Sarana ibadah
+    var semarang_buildings = L.tileLayer.wms("/geoserver/wms", {
         layers: "semarang1:Sarana Ibadah",
         format: "image/png",
         transparent: true
     });
+    semarang_buildings.addTo(mymap);
+
+
+
     semarang_road.addTo(mymap);
 </script>
 
