@@ -23,7 +23,7 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
          <div class="panel-body">
             <div class="form-group">
                <label class="control-label col-sm-2">Id:<span style='color:red'>*</span></label>
-               <div class="col-sm-1 mb-2 mt-2">
+               <div class="col-sm-5 mb-2 mt-2">
                   <input class="form-control" value="<?= $user->id ?>" type="text" name="id" required>
                </div>
             </div>
