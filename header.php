@@ -42,7 +42,7 @@ $obj = new Db_Class();
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="index.php">Sarana Ibadah</a></li>
-              <li><a class="dropdown-item" href="#">Luas</a></li>
+              <li><a class="dropdown-item" href="#">Luas Wilayah</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -55,7 +55,7 @@ $obj = new Db_Class();
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="map/map.php">Leaflet Map</a></li>
-              <li><a class="dropdown-item" href="map/map3.php">Native Map</a></li>
+              <li><a class="dropdown-item" href="map/map3.php">Openlayers Map</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
