@@ -1,0 +1,1 @@
+var myBingKey = 'AseFZQLqGuJGgYKUqe2dPKSrmwvmQiUNJMrFyUj8LGDl0n0Z7JT5Cb_l5DO1Bvt8';
