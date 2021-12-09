@@ -13,9 +13,11 @@ include('../header2.php');
 
     <link rel="stylesheet" href="libs/leaflet.css">
     <link rel="stylesheet" href="css/mymap.css">
-
-
     <script src="libs/leaflet.js"></script>
+    <script src='http://cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.js'></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
+    <script src="libs/leaflet-bing-layer-gh-pages/leaflet-bing-layer.js"></script>
+    <link href='http://cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.css' rel='stylesheet' />
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
@@ -29,7 +31,7 @@ include('../header2.php');
     var osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 
         {
-            attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+            attribution: '<a href="https://www.openstreetmap.org/copyright"> Kevin Gilbert Toding |© OpenStreetMap contributors, CC-BY-SA</a>',
             subdomains: ['a', 'b', 'c']
         }
     );
@@ -45,7 +47,6 @@ include('../header2.php');
     });
     semarang.addTo(mymap);
 
-
     //Menampilkan Sarana ibadah
     var semarang_buildings = L.tileLayer.wms("/geoserver/wms", {
         layers: "semarang1:Sarana Ibadah",
@@ -54,17 +55,19 @@ include('../header2.php');
     });
     semarang_buildings.addTo(mymap);
 
+    var basemap = {
+        "OpenstreetMaap": osm
+    };
 
+    var overlaymap = {
+        "Kecamatan": semarang,
+        "Sarana Ibadah": semarang_buildings
+    };
 
-    semarang_road.addTo(mymap);
+    L.control.layers(basemap, overlaymap).addTo(mymap);
 </script>
 
-
 <body>
-
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-
-</html>
+<?php include('../footer2.php'); ?>
