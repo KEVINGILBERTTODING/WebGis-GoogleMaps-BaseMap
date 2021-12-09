@@ -48,6 +48,7 @@ $obj = new Db_Class();
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="map.php">Leaflet Map</a></li>
               <li><a class="dropdown-item" href="map3.php">Openlayers Map</a></li>
+              <li><a class="dropdown-item" href="bing.php">BingLayers Map</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
