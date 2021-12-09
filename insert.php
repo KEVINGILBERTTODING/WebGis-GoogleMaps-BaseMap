@@ -10,15 +10,23 @@ if (isset($_POST['submit']) and !empty($_POST['submit'])) {
    }
 }
 ?>
+
 <div class="container">
 
-   <a href="index.php" class="btn btn-primary pull-right mt-4"><span class="glyphicon glyphicon-eye-open"></span> View Records</a>
+   <div class="row justify-content-center">
+      <h1 class="h2 bold-3 my-5 max-width-5x text-center">Create Data Sarana Ibadah</h1>
+   </div>
+
+</div>
+<div class="container">
+
+   <a href="index.php" class="btn btn-primary pull-left mt-4"><span class="glyphicon glyphicon-eye-open"></span> View Records</a>
    <br>
+   <hr>
 
-   <div class="container mt-4 mb-4">
-      <form class="form-horizontal" method="post">
+   <div class="card-body mt-5 mb-4">
+      <form class="card-body" method="post">
          <div class="panel-body">
-
             <div class="form-group">
                <label class="control-label col-sm-2">ID:<span style='color:red'>*</span></label>
                <div class="col-sm-5 mt-2">

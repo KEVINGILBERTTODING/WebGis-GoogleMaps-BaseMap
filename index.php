@@ -26,18 +26,17 @@ if (isset($_POST['delete'])) {
 ?>
 
 <div class="container-fluid bg-3 mt-4 ml-auto" style="text-align: center;">
-  <h3>Tempat Ibadah</h3>
+  <h1>Fasilitas Tempat Ibadah</h1>
 
 </div>
-<div class=" container">
+<div class=" container mt-5">
   <div class="container-fluid">
     <div class="float-right">
-      <a href="insert.php" class="btn btn-primary pull-right mt-2"> Add Record</a>
+      <a href="insert.php" class="btn btn-primary pull-left mt-2 mb-4"> Add Record</a>
     </div><br>
     <table class="table table-bordered table-striped">
       <thead>
         <tr class="active">
-
           <th>ID</th>
           <th>Nama Tempat Ibadah</th>
           <th>Jenis Tempat Ibadah</th>

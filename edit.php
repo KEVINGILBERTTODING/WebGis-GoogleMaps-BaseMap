@@ -13,13 +13,24 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
 
 
 ?>
+
+
 <div class="container">
 
-   <a href="index.php" class="btn btn-primary pull-right mt-4"><span class="glyphicon glyphicon-step-backward"></span>Back</a>
-   <br>
-   <div class="container">
+   <div class="row justify-content-center">
+      <h1 class="h2 bold-3 my-5 max-width-5x text-center">Update Data Sarana Ibadah</h1>
+   </div>
 
-      <form class="form-group mb-4 mt-4" method="post">
+</div>
+
+<div class="container">
+
+   <a href="index.php" class="btn btn-primary pull-left mt-4"><span class="glyphicon glyphicon-step-backward"></span>Back</a>
+   <br>
+   <hr>
+   <div class="card-body">
+
+      <form class="card-body mb-4 mt-4" method="post">
          <div class="panel-body">
             <div class="form-group">
                <label class="control-label col-sm-2">Id:<span style='color:red'>*</span></label>
