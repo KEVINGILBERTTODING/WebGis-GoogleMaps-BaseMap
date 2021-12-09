@@ -37,6 +37,7 @@ if (isset($_POST['update']) and !empty($_POST['update'])) {
                <label class="control-label col-sm-2">Jenis tempat ibadah:<span style='color:red'>*</span></label>
                <div class="col-sm-5 mt-2">
                   <select name="jenis" id="jenis">
+                     <option value="<?= $user->jenis ?>"><?= $user->jenis ?></option>
                      <option value="Gereja">Gereja</option>
                      <option value="Masjid">Masjid</option>
                      <option value="Pura">Pura</option>
