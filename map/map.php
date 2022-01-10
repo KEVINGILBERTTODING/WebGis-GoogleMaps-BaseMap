@@ -1,7 +1,3 @@
-<?php
-include('../header2.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,42 +22,52 @@ include('../header2.php');
 <div id="mapdiv"></div>
 <script>
     //Menampilkan OSM sebagai base map
-    var mymap = L.map("mapdiv").setView([-7.0149, 110.3942], 12);
+    var mymap = L.map("mapdiv").setView([-7.7768, 112.1313], 11);
+
 
     var osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 
         {
-            attribution: '<a href="https://www.openstreetmap.org/copyright"> Kevin Gilbert Toding |© OpenStreetMap contributors, CC-BY-SA</a>',
-            subdomains: ['a', 'b', 'c']
+            attribution: false,
+
         }
     );
 
     osm.addTo(mymap);
 
-    //Menampilkan Map
 
-    var semarang = L.tileLayer.wms("/geoserver/wms", {
-        layers: "semarang1:adm_kec_kota_semarang_250k",
+    googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    });
+    googleStreets.addTo(mymap);
+    //Menampilkan Map keacamatan kediri
+
+    var kediri = L.tileLayer.wms("/geoserver/wms", {
+        layers: "kediri:kecamatan dan jalan",
         format: "image/png",
         transparent: true
     });
-    semarang.addTo(mymap);
+    kediri.addTo(mymap);
 
-    //Menampilkan Sarana ibadah
-    var semarang_buildings = L.tileLayer.wms("/geoserver/wms", {
-        layers: "semarang1:Sarana Ibadah",
+    //Menampilkan peternakan kediri
+    var kediri_buildings = L.tileLayer.wms("/geoserver/wms", {
+        layers: "kediri:peternakanxxxxxx",
         format: "image/png",
         transparent: true
     });
-    semarang_buildings.addTo(mymap);
+    kediri_buildings.addTo(mymap);
 
     var basemap = {
-        "OpenstreetMaap": osm
+        "OpenstreetMaap": osm,
+        "GoogleMaps": googleStreets
+
     };
 
     var overlaymap = {
-        "Kecamatan": semarang,
-        "Sarana Ibadah": semarang_buildings
+        "Kecamatan dan jalan": kediri,
+        "Peternakan": kediri_buildings,
+
     };
 
     L.control.layers(basemap, overlaymap).addTo(mymap);
@@ -69,5 +75,3 @@ include('../header2.php');
 
 <body>
 </body>
-
-<?php include('../footer2.php'); ?>

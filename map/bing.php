@@ -31,7 +31,7 @@ include('../header2.php');
     <script>
         var BING_KEY = 'AseFZQLqGuJGgYKUqe2dPKSrmwvmQiUNJMrFyUj8LGDl0n0Z7JT5Cb_l5DO1Bvt8'
 
-        var map = L.map('map').setView([-7.0149, 110.3942], 12)
+        var map = L.map('map').setView([-7.7768, 112.1313], 12)
 
 
         // Base map OSM
@@ -42,6 +42,12 @@ include('../header2.php');
                 subdomains: ['a', 'b', 'c']
             }
         );
+
+        googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+        googleStreets.addTo(map);
 
         osm.addTo(map);
         // Base map Bing
@@ -54,7 +60,7 @@ include('../header2.php');
 
 
         var semarang = L.tileLayer.wms("/geoserver/wms", {
-            layers: "semarang1:adm_kec_kota_semarang_250k",
+            layers: "kediri:kecamatan dan jalan",
             format: "image/png",
             transparent: true
         });
@@ -62,7 +68,7 @@ include('../header2.php');
 
         //Menampilkan Sarana ibadah
         var semarang_buildings = L.tileLayer.wms("/geoserver/wms", {
-            layers: "semarang1:Sarana Ibadah",
+            layers: "kediri:peternakankevin1",
             format: "image/png",
             transparent: true
         });
@@ -70,7 +76,8 @@ include('../header2.php');
 
         var basemap = {
             "OpenstreetMap": osm,
-            "BingBaseMap": bingAerial
+            "BingBaseMap": bingAerial,
+            "GoogleMap": googleStreets
         };
 
         var overlaymap = {
